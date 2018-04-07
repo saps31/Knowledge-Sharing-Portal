@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> 
+<html class="no-focus" lang="en" xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Knowledge Sharing Platform</title>
+
+        <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta name="author" content="pixelcave">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Web fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+
+        <!-- Bootstrap and OneUI CSS framework -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
+    </head>
+    <body>
+        <!-- Page Container -->
+        <!--
+            Available Classes:
+
+            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
+
+            'sidebar-l'                  Left Sidebar and right Side Overlay
+            'sidebar-r'                  Right Sidebar and left Side Overlay
+            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
+            'sidebar-o'                  Visible Sidebar by default (> 991px)
+            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
+
+            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
+            'side-overlay-o'             Visible Side Overlay by default (> 991px)
+
+            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
+
+            'header-navbar-fixed'        Enables fixed header
+            'header-navbar-transparent'  Enables a transparent header (if also fixed, it will get a solid dark background color on scrolling)
+        -->
+        <div id="page-container" class="side-scroll header-navbar-fixed header-navbar-transparent">
+
+            <!-- Header -->
+            <header id="header-navbar" class="content-mini content-mini-full">
+                <div class="content-boxed">
+                    <!-- Header Navigation Right -->
+                    <ul class="nav-header pull-right">
+                        <li>
+                            <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+                        </li>
+                        <li class="hidden-md hidden-lg">
+                            <!-- Toggle class helper (for main header navigation below in small screens), functionality initialized in App() -> uiToggleClass() -->
+                            <button class="btn btn-link text-white pull-right" data-toggle="class-toggle" data-target=".js-nav-main-header" data-class="nav-main-header-o" type="button">
+                                <i class="fa fa-navicon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <!-- END Header Navigation Right -->
+
+                    <!-- Main Header Navigation -->
+                    <ul class="js-nav-main-header nav-main-header pull-left">
+                        <li class="text-right hidden-md hidden-lg">
+                            <!-- Toggle class helper (for main header navigation in small screens), functionality initialized in App() -> uiToggleClass() -->
+                            <button class="btn btn-link text-white" data-toggle="class-toggle" data-target=".js-nav-main-header" data-class="nav-main-header-o" type="button">
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <a class="active" href="index">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-submenu" href="javascript:void(0)">Department</a>
+                            <ul>
+                                <li>
+                                    <a href="comp">Computer Engg</a>
+                                </li>
+                                <li>
+                                    <a href="electrical">Electrical Engg</a>
+                                </li>
+                                <li>
+                                    <a href="mech">Mechanical Engg</a>
+                                </li>
+                                <li>
+                                    <a href="civil">Civil Engg</a>
+                                </li>
+                                <li>
+                                    <a href="ec">EC Engg</a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="about-us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contact-us">Contact Us</a>
+                        </li>
+						<li>
+                            <a href="faqs">FAQs</a>
+                        </li> 							
+                    </ul>
+                    <!-- END Main Header Navigation -->
+					
+					
+
+                    <!-- Header Navigation Left -->
+                    <ul class="nav-main-header pull-right">                        
+                         <li>
+                            <a href="register">Register</a>
+                        </li>
+						<li>
+                            <a href="login">Login</a>
+                        </li>						
+                        
+                    </ul>
+                    <!-- END Header Navigation Left -->
+                </div>
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Hero Content -->
+                <div class="bg-image" style="background-image: url('https://thumb7.shutterstock.com/display_pic_with_logo/810352/149538779/stock-photo-education-concept-pixelated-words-knowledge-sharing-on-digital-background-d-render-149538779.jpg');height: 412px;  ">
+                
+                    <div class="bg-primary-dark-op">
+                        <section class="content content-full content-boxed overflow-hidden">
+                            <!-- Section Content -->
+                            <div class="push-100-t push-50 text-center">
+                                <h1 class="h2 text-white push-10 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Share Your Knowledge</h1>
+                                <h2 class="h5 text-white-op push-50 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Knowledge platform for sharing the project works taken up by the students in Technical/Higher Educational Institutes and Universities throughout the country</h2>
+                                <a class="btn btn-rounded btn-noborder btn-lg btn-primary visibility-hidden" data-toggle="appear" data-class="animated bounceIn" data-timeout="800" href="register">Join For Free</a>
+								<br/><br/>
+								<a class="btn btn-rounded btn-noborder btn-lg btn-primary visibility-hidden hidden-md hidden-lg" data-toggle="appear" data-class="animated bounceIn" data-timeout="800" href="login">Login</a>
+                            </div>                            
+                            <!-- END Section Content -->
+                        </section>
+                    </div>
+                </div>
+                <!-- END Hero Content -->
+
+                <!-- Classic Features #1 -->
+                <div class="bg-white" style="height: 265px;">
+                    <section class="content content-boxed">
+                        <!-- Section Content -->
+                                                  
+                            <div class="col-sm-6">
+                                <div class="text-center push">
+                                    <span class="item item-2x item-circle border">
+                                        <i class="si si-users"></i>
+                                    </span>
+                                </div>
+                                <h3 class="h5 font-w600 text-uppercase text-center push-10" >Connecting Students</h3>
+                                <p>Premium and fully responsive frontend pages are included in OneUI package, too. They use the same resources with the backend, so you can build your web application in one go, using all available components wherever you like.</p>
+                            </div>
+                        
+                            <div class="col-sm-6">
+                                <div class="text-center push-30">
+                                    <span class="item item-2x item-circle border">
+                                        <i class="si si-book-open"></i>
+                                    </span>
+                                </div>
+                                <h3 class="h5 font-w600 text-uppercase text-center push-10">Read and Discuss Projects</h3>
+                                <p>Bootstrap is a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. OneUI was built on top, extending it to a large degree.</p>
+                            </div>                                  
+                        
+                        <!-- END Section Content -->
+                    </section>
+                </div>
+                <!-- END Classic Features #1 -->
+				
+                
+			
+
+                <!-- Ratings -->
+                <div class="bg-image" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
+                    <div class="bg-primary-dark-op">
+                        <section class="content content-full content-boxed">
+                            <!-- Section Content -->
+                            <div class="row items-push-2x push-50-t text-center">
+                                <div class="col-sm-4 visibility-hidden" data-toggle="appear" data-offset="-150">
+                                    <img class="img-avatar img-avatar-thumb" src="assets/img/avatars/avatar1.jpg" alt="">
+                                    <div class="text-warning push-10-t push-15">
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+										<i class="fa fa-fw fa-star-half"></i>
+                                        
+                                    </div>
+                                    <div class="h4 text-white-op push-5">Bau j Mast che !</div>
+                                    <div class="h6 text-gray">- Tanvi</div>
+                                </div>
+                                <div class="col-sm-4 visibility-hidden" data-toggle="appear" data-offset="-150" data-timeout="150">
+                                    <img class="img-avatar img-avatar-thumb" src="assets/img/avatars/avatar11.jpg" alt="">
+                                    <div class="text-warning push-10-t push-15">
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star-half"></i>                                       
+                                    </div>
+                                    <div class="h4 text-white-op push-5">Awesome</div>
+                                    <div class="h6 text-gray">- Sapan</div>
+                                </div>
+                                <div class="col-sm-4 visibility-hidden" data-toggle="appear" data-offset="-150" data-timeout="300">
+                                    <img class="img-avatar img-avatar-thumb" src="assets/img/avatars/avatar1.jpg" alt="">
+                                    <div class="text-warning push-10-t push-15">
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>                                        
+                                    </div>
+                                    <div class="h4 text-white-op push-5">Highly recommended for students who want to share their projects to the world</div>
+                                    <div class="h6 text-gray">- xyz</div>
+                                </div>
+                            </div>
+                            <!-- END Section Content -->
+                        </section>
+                    </div>
+                </div>
+                <!-- END Ratings -->
+
+                <!-- Get Started -->
+                <div class="bg-gray-lighter">
+                    <section class="content content-full content-boxed">
+                        <!-- Section Content -->
+                        <div class="push-20-t push-20 text-center">
+                            <h3 class="h4 push-20 visibility-hidden" data-toggle="appear">Start sharing your cool and innovative projects now!</h3>
+                            <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated bounceIn" href="register">Get Started Today</a>
+                        </div>
+                        <!-- END Section Content -->
+                    </section>
+                </div>
+                <!-- END Get Started -->
+            </main>
+            <!-- END Main Container -->
+
+            <!-- Footer -->
+            <footer id="page-footer" class="bg-white">
+                <div class="content content-boxed">
+                   
+
+                    <!-- Copyright Info -->
+                    <div class="font-s12 push-20 clearfix">
+                        
+                        
+                        <div class="text-center">
+                            <a class="font-w600">Knowledge Sharing Platform</a> &copy; <span class="js-year-copy"></span>
+                        </div>
+                    </div>
+                    <!-- END Copyright Info -->
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+        <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page JS Code -->
+        <script>
+            jQuery(function () {
+                // Init page helpers (Appear + CountTo plugins)
+                App.initHelpers(['appear', 'appear-countTo']);
+            });
+        </script>
+    </body>
+</html>
